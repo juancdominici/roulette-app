@@ -1,4 +1,3 @@
-import React from "react";
 import { AnimatePresence } from "framer-motion";
 import Item from "./Item";
 import { COLORS } from "./constants";

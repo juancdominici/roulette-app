@@ -40,7 +40,7 @@ function App() {
     setItemList([]);
   };
 
-  const handleWheelClick = (e: any) => {
+  const handleWheelClick = () => {
     // If the wheel is already rotating, do nothing
     if (isRotating) return;
     setIsRotating(true);
