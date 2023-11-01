@@ -26,6 +26,44 @@ button.neobrutal:hover {
   transition: all 0.2s ease-in-out;
 }
 
+.spinning-wheel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinning-wheel svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wheel {
+  border-radius: 50%;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.wheel-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+  text-align: center;
+  line-height: 300px;
+}
+
+.wheel-container:before {
+  content: "";
+  position: relative;
+  z-index: 49;
+  border-top: 25px solid #000;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  left: calc(50% - 25px);
+  top: 15%;
+}
+
 /* Works on Firefox */
 * {
   scrollbar-width: thin;

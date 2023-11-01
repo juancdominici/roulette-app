@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import Item from "./Item";
-import { COLORS } from "./constants";
+import { COLORS } from "../utils/constants";
 
 type ItemListProps = {
   itemList: any[];

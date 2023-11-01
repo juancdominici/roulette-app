@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as d3 from "d3";
 import { AnimatePresence, motion } from "framer-motion";
-import "./SpinningWheel.css";
-import { COLORS } from "./constants";
+import { COLORS } from "../utils/constants";
 
 const SpinningWheel = ({ rotation, itemList, handleWheelClick }: any) => {
   const wheelRef = useRef<SVGSVGElement>(null);
