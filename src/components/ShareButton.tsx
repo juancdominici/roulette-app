@@ -52,7 +52,7 @@ const ShareButton = () => {
   return (
     <React.Fragment>
       <button
-        className="font-bold py-2 px-2 pl-6 w-[30%] neobrutal"
+        className="font-bold py-2 px-2 pl-6 w-[25%] neobrutal"
         onClick={handleShareModal}
       >
         {t("buttons.share")}

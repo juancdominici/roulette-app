@@ -26,6 +26,24 @@ button.neobrutal:hover {
   transition: all 0.2s ease-in-out;
 }
 
+button.en-flag {
+  background-image: url("/icon-en.svg");
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+button.es-flag {
+  background-image: url("/icon-es.svg");
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
 .spinning-wheel {
   display: flex;
   justify-content: center;
