@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface InputProps {
   itemList: any[];
@@ -6,6 +7,7 @@ interface InputProps {
 }
 
 const Input = ({ itemList, setItemList }: InputProps) => {
+  const { t } = useTranslation();
   const [newItemName, setNewItemName] = useState("");
 
   return (
@@ -13,7 +15,7 @@ const Input = ({ itemList, setItemList }: InputProps) => {
       <input
         className="indent-2 border-black border-r-4 bg-white h-14 px-5 text-xl focus:outline-none w-full"
         type="text"
-        placeholder="Add item"
+        placeholder={t("common.inputPlaceholder")}
         value={newItemName}
         maxLength={25}
         onChange={(e) => setNewItemName(e.target.value)}

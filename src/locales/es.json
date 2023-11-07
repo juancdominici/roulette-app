@@ -1,0 +1,20 @@
+{
+  "title": "Ruleta",
+  "buttons": {
+    "reset": "Reiniciar",
+    "clear": "Limpiar",
+    "start": "Comenzar",
+    "share": "Compartir",
+    "spinAgain": "Volver a girar",
+    "spinWithoutWinner": "Girar sin el ganador"
+  },
+  "common": {
+    "isTheWinner": "es el ganador!",
+    "inputPlaceholder": "Escribe algo"
+  },
+  "share": {
+    "linkedIn": "Vamos a jugar a la ruleta! Quién será el ganador? ",
+    "twitter": "Vamos a jugar a la ruleta! Quién será el ganador? ",
+    "whatsapp": "Vamos a jugar a la ruleta! Quién será el ganador? "
+  }
+}

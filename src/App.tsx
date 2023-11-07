@@ -5,8 +5,10 @@ import Confetti from "react-confetti";
 import Buttons from "./components/Buttons";
 import Input from "./components/Input";
 import SpinningWheel from "./components/SpinningWheel";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation();
   const [itemList, setItemList] = useState<
     {
       id: string;
@@ -15,7 +17,9 @@ function App() {
   >([]);
   const [rotation, setRotation] = useState(0);
   const [isRotating, setIsRotating] = useState(false);
-  const [winner, setWinner] = useState<any>(null);
+  const [winner, setWinner] = useState<{ id: string; name: string } | null>(
+    null
+  );
 
   const handleReset = () => {
     setItemList([]);
@@ -27,12 +31,12 @@ function App() {
   };
 
   const handleSpinWithoutWinner = () => {
-    const filteredItemList = itemList.filter((item) => item.id !== winner.id);
+    const filteredItemList = itemList.filter((item) => item.id !== winner?.id);
     setItemList([...filteredItemList]);
     setWinner(null);
   };
 
-  const handleWinner = (item: any) => {
+  const handleWinner = (item: { id: string; name: string }) => {
     setWinner(item);
   };
 
@@ -85,30 +89,30 @@ function App() {
         />
       )}
       {winner ? (
-        <div className="grid gap-4 grid-cols-1 w-full">
-          <div className="bg-transparent flex flex-col justify-between">
+        <div className="grid gap-4 grid-cols-1 w-full place-items-center">
+          <div className="bg-transparent flex flex-col justify-center max-w-sm">
             <div className="flex flex-col justify-center items-center">
               <h1 className="text-4xl font-bold">{winner.name}</h1>
-              <h1 className="text-2xl font-bold">is the winner!</h1>
+              <h1 className="text-2xl font-bold">{t("common.isTheWinner")}</h1>
             </div>
             <div className="flex justify-center items-center gap-5 flex-wrap">
               <button
                 className="bg-white text-black font-bold px-4 mt-4 neobrutal"
                 onClick={handleReset}
               >
-                Reset
+                {t("buttons.reset")}
               </button>
               <button
                 className="bg-white text-black font-bold px-4 mt-4 neobrutal"
                 onClick={handleSpinAgain}
               >
-                Spin Again
+                {t("buttons.spinAgain")}
               </button>
               <button
                 className="bg-white text-black font-bold px-4 mt-4 neobrutal"
                 onClick={handleSpinWithoutWinner}
               >
-                Spin Without Winner
+                {t("buttons.spinWithoutWinner")}
               </button>
             </div>
           </div>

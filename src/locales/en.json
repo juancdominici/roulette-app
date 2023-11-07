@@ -1,0 +1,20 @@
+{
+  "title": "Roulette",
+  "buttons": {
+    "reset": "Reset",
+    "clear": "Clear",
+    "start": "Start",
+    "share": "Share",
+    "spinAgain": "Spin again",
+    "spinWithoutWinner": "Spin without winner"
+  },
+  "common": {
+    "isTheWinner": "is the winner!",
+    "inputPlaceholder": "Write something here"
+  },
+  "share": {
+    "linkedIn": "Let's play Roulette! Who will be the winner? ",
+    "twitter": "Let's play Roulette! Who will be the winner? ",
+    "whatsapp": "Let's play Roulette! Who will be the winner? "
+  }
+}
